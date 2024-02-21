@@ -25,7 +25,7 @@ class Router{
 
     public function dispatch() {
         $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        $url = str_replace("/php/My_tweeter", "", $url);
+        $url = str_replace("/My_tweeter", "", $url);
     
         foreach ($this->routes as $value) {
             if ($url == $value['path'] && $_SERVER['REQUEST_METHOD'] == $value['method']) {

@@ -6,6 +6,7 @@ $title = "Inscription";
 ?>
 <script defer src="js/inscription.js"></script>
 <div class="container flex center item-center col h-vh my-3">
+    <a class="text-info" href="http://localhost:8888/My_tweeter/">⬅️ Menu principal</a>
     <h1 class='text-light'>Des infos.. pour mieux tweet !</h1>
     <p class='text-info'>Plus que quelques click pour prendre contact avec vos amis ! 👬</p>
     <?php 

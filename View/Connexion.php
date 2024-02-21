@@ -7,6 +7,7 @@ $title = "Connexion";
 
 <script defer src="js/connexion.js"></script>
 <div class="container flex center item-center col h-vh">
+    <a class="text-info py-2" href="http://localhost:8888/My_tweeter/">⬅️ Menu principal</a>
     <h1 class='text-light'>Prêt a tweet ?</h1>
     <p class='text-info'>Plus que quelques click pour prendre contact avec vos amis ! 👬</p>
     <?php 

@@ -29,7 +29,7 @@ $("#formulaire_connexion").submit(function (e) {
 
   $.ajax({
     type: "POST",
-    url: "http://localhost:8888/W-WEB-090-MAR-1-1-academie-dylan.bouraoui/connexion",
+    url: "http://localhost:8888/My_tweeter/connexion",
     data: value,
     dataType: "json",
     success: function (response) {

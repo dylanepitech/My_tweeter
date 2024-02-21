@@ -41,7 +41,7 @@ $("#formulaire_inscription").submit(function (e) {
   const value = $("#formulaire_inscription").serialize();
   $.ajax({
     type: "POST",
-    url: "http://localhost:8888/W-WEB-090-MAR-1-1-academie-dylan.bouraoui/inscription",
+    url: "http://localhost:8888/My_tweeter/inscription",
     data: value,
     dataType: "json",
     success: function (response) {

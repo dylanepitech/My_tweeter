@@ -1,0 +1,19 @@
+.nav_corp{
+    width: 200px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position:fixed;
+    left: 0px;
+    top: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.1em;
+    }
+}

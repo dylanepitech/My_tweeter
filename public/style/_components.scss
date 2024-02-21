@@ -26,6 +26,13 @@ a{
     }
 }
 
+footer a{
+    color: black;
+    &:hover{
+        color: blue;
+    }
+}
+
 .container {
     width: 90vw;
     height: auto;

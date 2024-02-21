@@ -3,8 +3,8 @@
 @import "_grid";
 @import "_flexbox";
 @import "_position";
-@import "components/navbar";
 @import "components/cookie";
+@import "components/burger";
 
 @each $name, $value in $colors {
     .text-#{$name} {
@@ -87,6 +87,13 @@
 
     .py-#{$name} {
         padding: $value 0px;
+    }
+
+    .pl-#{$name} {
+        padding-left: $value;
+    }
+    .pr-#{$name} {
+        padding-right: $value;
     }
 
     .p-#{$name} {

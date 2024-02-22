@@ -9,7 +9,6 @@
             }
             public function view() {
                 $result_post = $this->db->getpost();
-                var_dump($result_post);
                 require_once 'View/Accueil.php';
             }
             public function post()
@@ -24,5 +23,11 @@
                     echo json_encode(array('status'=> 'echec','message'=> 'no'));
                     return;
                 }
+            }
+            public function like()
+            {
+                $put_like = $this->db->putlike($_POST['id_user'],$_POST['id_post']);
+
+                var_dump($put_like);
             }
         }

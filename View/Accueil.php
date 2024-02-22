@@ -5,7 +5,7 @@ $title = "Page d'accueil";
 <script defer src="js/Accueil.js"></script>
 <style>
 body {
-    background-color: gray !important;
+    background-color: black !important;
 }
 </style>
 
@@ -55,7 +55,7 @@ body {
                 </div>
             </div>
         </div>
-        <div class="col-7">
+        <div class="col-4-9 w-full">
             <div class='flex col item-center center gap-1'>
                 <div class='flex col center item-center gap-1 p-2 w-full'>
                     <img src="public/image/aots.png" height="50" width="50" alt="">
@@ -64,14 +64,37 @@ body {
                         <button class='btn-dark'>Twitter</button>
                     </form>
                 </div>
-                <div class="twitt border-1 text-light">
-                    <?php 
-                    foreach ($result_post as $value) {
-                    }
-                    ?>
+                <?php foreach ($result_post as $post): ?>
+                <div class="twitt border-1 w-full rounded-1">
+                    <div class='h-4 pl-2 flex start item-center py-2 gap-2'>
+                        <img src="public/image/aots.png" height="50" width="50" alt="">
+                        <h3 class='text-info'><?php echo $post['pseudo']; ?></h3>
+                    </div>
+                    <p class='p-2'>
+                        <?php echo $post['content']; ?>
+                    </p>
+                    <div class='flex around item-center h-4 py-2'>
+                        <a id="<?= $post['id'] ?>" class='text-light like' href="">like</a>
+                        <a class='text-light' href="">Comment</a>
+                        <a class='text-light' href="">Partage</a>
+                    </div>
                 </div>
-            </div>
-            <div class=" col-3 flex item-center center col">
+                <?php endforeach; ?>
+
             </div>
         </div>
+        <div class=" col-2 flex item-center center col">
+        </div>
     </div>
+</div>
+
+
+<?php 
+                    foreach ($result_post as $value) {
+                        echo "<div class='flex col item-center center'>";
+                        echo "<div class='h-4 flex start item-center'>";
+                        echo "<h4>".$value['pseudo']."</h4>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                    ?>

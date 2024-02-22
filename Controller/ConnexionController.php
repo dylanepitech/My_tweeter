@@ -16,9 +16,9 @@ class ConnexionController
     {
         $var = $this->user->connexion($_POST);
         if ($var && $_POST['conected'] == "on"){
-            setcookie('user_id', $var['id'], time()+3600*24, '/', '', true, true);
-            setcookie('user_email', $var['email'], time()+3600*24, '/', '', true, true);
-            setcookie('user_pseudo', $var['pseudo'], time()+3600*24, '/', '', true, true);
+            setcookie('user_id', $var['id'], time()+3600*24, '/My_tweeter', '',true);
+            setcookie('user_email', $var['email'], time()+3600*24, '/My_tweeter', '', true);
+            setcookie('user_pseudo', $var['pseudo'], time()+3600*24, '/My_tweeter', '', true);
            echo json_encode(array('status'=> 'success','message'=> 'OK'));
             exit;
         }else{

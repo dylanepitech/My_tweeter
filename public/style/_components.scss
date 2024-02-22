@@ -4,7 +4,9 @@
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
+a{
+    text-decoration: none;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -89,6 +91,10 @@ input, select{
     }
 
 }
+.noborder{
+    border: 0px solid black !important;
+    border-radius: 15px !important;
+}
 .checkbox{
     width: 10% !important;
     height: 20px;
@@ -108,4 +114,43 @@ input, select{
 .base:hover{
     background: rgb(24,24,24);
     cursor: pointer;
+}
+
+.card{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    width: 700px;
+    min-height: 200px;
+    max-height: 800px;
+    height: auto;
+    border: 1px solid gray;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+textarea{
+    resize: none;
+    width: clamp(100px,60%, 90% );
+    height: 100px;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+}
+.box{
+    width: clamp(200px,40vw, 80vw);
+    height: auto;
+    background-color:#2f2f2f;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .icons {
+        flex-direction: column !important;
+    }
 }

@@ -73,6 +73,18 @@
 
 
 @each $name, $value in $size {
+    .top-#{$name}{
+        top: $value;
+    }
+    .bottom-#{$name}{
+        bottom: $value;
+    }
+    .right-#{$name}{
+        right: $value;
+    }
+    .left-#{$name}{
+        left: $value;
+    }
     .pt-#{$name} {
         padding-top: $value;
     }
@@ -142,7 +154,7 @@
 
 @each $name, $value in $border {
     .border-#{$name} {
-        border: $value solid black;
+        border: $value solid white;
     }
 }
 

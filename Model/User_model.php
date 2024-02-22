@@ -3,7 +3,6 @@ namespace Model;
 
 use Model\Database;
 use PDO;
-use PDOException;
 class User_model extends Database
 {
 

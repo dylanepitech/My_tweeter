@@ -5,7 +5,7 @@ $title = "Page d'accueil";
 <script defer src="js/Accueil.js"></script>
 <style>
 body {
-    background-color: black !important;
+    background-color: gray !important;
 }
 </style>
 
@@ -56,13 +56,22 @@ body {
             </div>
         </div>
         <div class="col-7">
-            <div class="alert-light"></div>
-        </div>
-        <div class="col-3">
-            <div class="alert-warning"></div>
-        </div>
-        <div class="col-3">
-            <div class="alert-info"></div>
+            <div class='flex col item-center center gap-1'>
+                <div class='flex col center item-center gap-1 p-2 w-full'>
+                    <img src="public/image/aots.png" height="50" width="50" alt="">
+                    <form method="POST" id='twitt'>
+                        <input type="text" id='content' name='content'>
+                        <button class='btn-dark'>Twitter</button>
+                    </form>
+                </div>
+                <div class="twitt border-1 text-light">
+                    <?php 
+                    foreach ($result_post as $value) {
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class=" col-3 flex item-center center col">
+            </div>
         </div>
     </div>
-</div>

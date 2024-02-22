@@ -19,6 +19,6 @@ $title = "Connexion";
     echo "<p id='error' class='text-danger fs-2'></p>";
     $formulaire->button('info',"Commencer à tweeter !");
     $formulaire->close();
-    echo "<p class='text-light fs-1 px-5'>En cochant la cas ou en validant la connexion, vous authoriser les cookies à être installer sur votre navigateur.</p>"
+    echo "<p class='text-light fs-1 px-5'>Pour pouvoir vous connecter vous devez accepter les cookies.</p>"
 ?>
 </div>

@@ -3,8 +3,6 @@ namespace Controller;
 
 use Model\User_model;
 
-
-
 class InscriptionController {
    private $user;
     public function __construct() {

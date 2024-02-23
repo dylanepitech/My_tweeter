@@ -10,13 +10,9 @@ $(document).ready(function () {
       data: formdata,
       processData: false,
       contentType: false,
-      success: function (response) {
-        if (response.status == "success") {
-          window.location.href = "accueil";
-          return;
-        }
-      },
+      success: function (response) {},
     });
+    location.reload(true);
   });
 });
 
@@ -45,7 +41,12 @@ $(document).ready(function () {
         url: "http://localhost:8888/My_tweeter/accueil_like",
         data: array,
         dataType: "json",
-        success: function (response) {},
+        success: function (response) {
+          if (response.status == "success") {
+            console.log(response);
+            location.reload(true);
+          }
+        },
         error: function (xhr, status, error) {},
       });
     } else {

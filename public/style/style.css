@@ -158,6 +158,9 @@ textarea {
   .icons {
     flex-direction: column !important;
   }
+  .div-like {
+    flex-direction: column !important;
+  }
 }
 .row {
   display: grid;
@@ -810,6 +813,29 @@ textarea {
   cursor: pointer;
 }
 
+.btn-twitt-primary {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #0d6efd;
+  color: white;
+}
+.btn-twitt-primary:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-primary:hover {
+  cursor: pointer;
+  background-color: #0262ef;
+}
+.btn-twitt-primary:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
 .text-secondary {
   color: #D9D9D9;
 }
@@ -849,6 +875,29 @@ textarea {
   background-color: #cccccc;
 }
 .btn-secondary:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+.btn-twitt-secondary {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #D9D9D9;
+  color: white;
+}
+.btn-twitt-secondary:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-secondary:hover {
+  cursor: pointer;
+  background-color: #cccccc;
+}
+.btn-twitt-secondary:active {
   box-shadow: 2px 2px 0px black;
   cursor: pointer;
 }
@@ -896,6 +945,29 @@ textarea {
   cursor: pointer;
 }
 
+.btn-twitt-success {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #198754;
+  color: white;
+}
+.btn-twitt-success:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-success:hover {
+  cursor: pointer;
+  background-color: #157147;
+}
+.btn-twitt-success:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
 .text-info {
   color: #0dcaf0;
 }
@@ -935,6 +1007,29 @@ textarea {
   background-color: #0cb6d8;
 }
 .btn-info:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+.btn-twitt-info {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #0dcaf0;
+  color: white;
+}
+.btn-twitt-info:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-info:hover {
+  cursor: pointer;
+  background-color: #0cb6d8;
+}
+.btn-twitt-info:active {
   box-shadow: 2px 2px 0px black;
   cursor: pointer;
 }
@@ -982,6 +1077,29 @@ textarea {
   cursor: pointer;
 }
 
+.btn-twitt-warning {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #ffc107;
+  color: white;
+}
+.btn-twitt-warning:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-warning:hover {
+  cursor: pointer;
+  background-color: #edb100;
+}
+.btn-twitt-warning:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
 .text-danger {
   color: #dc3545;
 }
@@ -1021,6 +1139,29 @@ textarea {
   background-color: #d32535;
 }
 .btn-danger:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+.btn-twitt-danger {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #dc3545;
+  color: white;
+}
+.btn-twitt-danger:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-danger:hover {
+  cursor: pointer;
+  background-color: #d32535;
+}
+.btn-twitt-danger:active {
   box-shadow: 2px 2px 0px black;
   cursor: pointer;
 }
@@ -1068,6 +1209,29 @@ textarea {
   cursor: pointer;
 }
 
+.btn-twitt-light {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #f8f9fa;
+  color: black;
+}
+.btn-twitt-light:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-light:hover {
+  cursor: pointer;
+  background-color: #e9ecef;
+}
+.btn-twitt-light:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
 .text-dark {
   color: #212529;
 }
@@ -1107,6 +1271,29 @@ textarea {
   background-color: #16181b;
 }
 .btn-dark:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+.btn-twitt-dark {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #212529;
+  color: white;
+}
+.btn-twitt-dark:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-dark:hover {
+  cursor: pointer;
+  background-color: #16181b;
+}
+.btn-twitt-dark:active {
   box-shadow: 2px 2px 0px black;
   cursor: pointer;
 }
@@ -1154,6 +1341,29 @@ textarea {
   cursor: pointer;
 }
 
+.btn-twitt-darkslate {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(27, 27, 27);
+  color: white;
+}
+.btn-twitt-darkslate:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-darkslate:hover {
+  cursor: pointer;
+  background-color: #0e0e0e;
+}
+.btn-twitt-darkslate:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
 .text-purple {
   color: #6f42c1;
 }
@@ -1193,6 +1403,29 @@ textarea {
   background-color: #643ab0;
 }
 .btn-purple:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+.btn-twitt-purple {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #6f42c1;
+  color: white;
+}
+.btn-twitt-purple:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-purple:hover {
+  cursor: pointer;
+  background-color: #643ab0;
+}
+.btn-twitt-purple:active {
   box-shadow: 2px 2px 0px black;
   cursor: pointer;
 }
@@ -1240,6 +1473,29 @@ textarea {
   cursor: pointer;
 }
 
+.btn-twitt-indigo {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #6610f2;
+  color: white;
+}
+.btn-twitt-indigo:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-indigo:hover {
+  cursor: pointer;
+  background-color: #5b0cdd;
+}
+.btn-twitt-indigo:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
 .text-teal {
   color: #20c997;
 }
@@ -1279,6 +1535,29 @@ textarea {
   background-color: #1cb386;
 }
 .btn-teal:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+.btn-twitt-teal {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #20c997;
+  color: white;
+}
+.btn-twitt-teal:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-teal:hover {
+  cursor: pointer;
+  background-color: #1cb386;
+}
+.btn-twitt-teal:active {
   box-shadow: 2px 2px 0px black;
   cursor: pointer;
 }
@@ -1326,6 +1605,29 @@ textarea {
   cursor: pointer;
 }
 
+.btn-twitt-cyan {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #0dcaf0;
+  color: white;
+}
+.btn-twitt-cyan:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-cyan:hover {
+  cursor: pointer;
+  background-color: #0cb6d8;
+}
+.btn-twitt-cyan:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
 .text-orange {
   color: #fd7e14;
 }
@@ -1365,6 +1667,29 @@ textarea {
   background-color: #f57102;
 }
 .btn-orange:active {
+  box-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+.btn-twitt-orange {
+  width: auto;
+  height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #fd7e14;
+  color: white;
+}
+.btn-twitt-orange:disabled {
+  filter: blur(1px);
+  filter: grayscale(60%);
+  text-decoration: line-through;
+}
+.btn-twitt-orange:hover {
+  cursor: pointer;
+  background-color: #f57102;
+}
+.btn-twitt-orange:active {
   box-shadow: 2px 2px 0px black;
   cursor: pointer;
 }

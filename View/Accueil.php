@@ -69,7 +69,7 @@ body {
                 <div class="twitt border-1 w-full rounded-1">
                     <div class='h-4 pl-2 flex start item-center py-2 gap-2'>
                         <img src="public/image/aots.png" height="50" width="50" alt="">
-                        <h3 class='text-info'><?php echo $post['pseudo']; ?></h3>
+                        <h3 class='text-info'><?php echo $post['user_pseudo']; ?></h3>
                     </div>
                     <p class='p-2'>
                         <?php echo $post['content']; ?>
@@ -77,11 +77,14 @@ body {
                     <?php if (!empty($post['image'])): ?>
                     <img src="<?php echo $post['image']; ?>" class="img" alt="image">
                     <?php endif; ?>
-                    <div class='flex around item-center h-4 py-2'>
-                        <button class='like-button' data-post-id='<?= $post['id'] ?>'>j'aime</button>
+                    <div class='flex around item-center center h-4 py-2 div-like row'>
+                        <button class='like-button btn-dark'
+                            data-post-id='<?= $post['id'] ?>'><?= $post['like_count'] ?>
+                            j'aime</button>
                         <a class='text-light' href="">Comment</a>
                         <a class='text-light' href="">Partage</a>
                     </div>
+                    <p>Poster le: <?= $post['date'] ?></p>
                 </div>
                 <?php endforeach; ?>
 
@@ -92,14 +95,3 @@ body {
         </div>
     </div>
 </div>
-
-
-<?php 
-                    foreach ($result_post as $value) {
-                        echo "<div class='flex col item-center center'>";
-                        echo "<div class='h-4 flex start item-center'>";
-                        echo "<h4>".$value['pseudo']."</h4>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                    ?>

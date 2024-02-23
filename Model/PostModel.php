@@ -10,19 +10,34 @@
             {
                 parent::__construct();
             }
-
+            //selectionne tout les ligne dans like ou il y a l'id post correspondant
             public function getpost()
-                {
-                    $query = "SELECT * FROM user inner join post on user.id = post.id_user order by date desc";
-                    try {
-                        $statement = $this->conn->prepare($query);
-                        $statement->execute();
-                        $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-                        return $posts;
-                    } catch (\Throwable $th) {
-                        return false;
-                    }
+            {
+                $query = "SELECT 
+                            p.*, 
+                            u.pseudo AS user_pseudo, 
+                            COUNT(l.id_post) AS like_count
+                          FROM 
+                            post p
+                          INNER JOIN 
+                            user u ON u.id = p.id_user
+                          LEFT JOIN 
+                            liked l ON p.id = l.id_post
+                          GROUP BY 
+                            p.id
+                          ORDER BY 
+                            p.date DESC";
+            
+                try {
+                    $statement = $this->conn->prepare($query);
+                    $statement->execute();
+                    $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+                    return $posts;
+                } catch (\Throwable $th) {
+                    return false;
                 }
+            }
+            
 
                 public function twitt($content, $id_user,$url_image)
                 {

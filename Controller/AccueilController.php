@@ -40,5 +40,10 @@
             public function like()
             {
                 $put_like = $this->db->putlike($_POST['id_user'],$_POST['id_post']);
+
+                if ($put_like)
+                {
+                    echo json_encode(array('status'=> 'success','message'=> ''));
+                }
             }
         }

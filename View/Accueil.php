@@ -32,11 +32,15 @@ body {
                 </div>
                 <div class='flex row beewtween item-center w-auto rounded-3 h-4 fs-2 gap-2 px-1 base' id="base">
                     <img src="public/style/icon/follow.png" height="30" width="30" alt="follower-icon">
-                    <p>Follower</p>
+                    <a class='text-light' href='follow'>Follower</a>
                 </div>
                 <div class='flex row beewtween item-center w-auto rounded-3 h-4 fs-2 gap-2 px-1 base' id="base">
                     <img src="public/style/icon/message.png" height="30" width="30" alt="message_icon">
                     <p>Messages</p>
+                </div>
+                <div class='flex row beewtween item-center w-auto rounded-3 h-4 fs-2 gap-2 px-1 base' id="base">
+                    <img src="public/style/icon/deconnexion.png" height="30" width="30" alt="message_icon">
+                    <a href="deconnexion" class='text-danger'>Deconexion</a>
                 </div>
                 <div class='flex row beewtween item-center w-auto rounded-3 h-auto fs-2 gap-2 px-1 py-1 mt-15 base'
                     id="base">
@@ -58,12 +62,18 @@ body {
                     <img src="public/image/aots.png" height="50" width="50" alt="">
                     <form method="POST" id='twitt' enctype="multipart/form-data">
                         <input type="text" id='content' name='content'>
+                        <p class='fs-1 text-info' id='size'></p>
                         <input type="file" name='file' id='file'>
                         <button class='btn-dark'>Twitter</button>
                     </form>
                 </div>
                 <?php foreach ($result_post as $post): ?>
-                <div class="twitt border-1 w-full rounded-1">
+                <div class="twitt border-1 w-full rounded-1 pt-2">
+                    <?php if($post['id_user'] == $_COOKIE['user_id']): ?>
+                    <div class='h1 pr-2 flex end item-center'>
+                        <a class="text-danger" href="">X</a>
+                    </div>
+                    <?php endif; ?>
                     <div class='h-4 pl-2 flex start item-center py-2 gap-2'>
                         <img src="public/image/aots.png" height="50" width="50" alt="">
                         <h3 class='text-info'><?php echo $post['user_pseudo']; ?></h3>

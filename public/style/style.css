@@ -166,6 +166,9 @@ textarea {
   .div-like {
     flex-direction: column !important;
   }
+  .card-follow {
+    flex-direction: column !important;
+  }
 }
 .row {
   display: grid;

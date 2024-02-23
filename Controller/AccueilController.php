@@ -9,6 +9,7 @@
             }
             public function view() {
                 $result_post = $this->db->getpost();
+                var_dump($result_post);
                 require_once 'View/Accueil.php';
             }
             public function post()

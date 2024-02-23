@@ -12,5 +12,9 @@ $router->Route('/accueil_like','AccueilController@like','POST','User_middleware'
 $router->Route('/inscription','InscriptionController@view');
 $router->Route('/inscription','InscriptionController@inscription_controller', 'POST');
 $router->Route('/connexion','ConnexionController@view');
+$router->Route('/deconnexion','ConnexionController@deconnexion');
 $router->Route('/connexion','ConnexionController@connexion_controller', 'POST');
 $router->Route('/connexion_reactivate','ConnexionController@reactivation', 'POST');
+$router->Route('/follow','FollowController@view' ,'GET', 'User_middleware');
+$router->Route('/delete_follower','FollowController@delete_follower' ,'GET', 'User_middleware');
+$router->Route('/delete_following','FollowController@delete_following' ,'GET', 'User_middleware');

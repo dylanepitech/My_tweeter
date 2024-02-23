@@ -10,7 +10,6 @@
             {
                 parent::__construct();
             }
-            //selectionne tout les ligne dans like ou il y a l'id post correspondant
             public function getpost()
             {
                 $query = "SELECT 

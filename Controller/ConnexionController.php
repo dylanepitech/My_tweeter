@@ -39,4 +39,14 @@ class ConnexionController
             return;
         }
     }
+
+    public function deconnexion()
+    {
+
+            setcookie('user_id', $_COOKIE['user_id'], time()-3600*24, '/My_tweeter', '',true);
+            setcookie('user_email', $_COOKIE['user_email'], time()-3600*24, '/My_tweeter', '', true);
+            setcookie('user_pseudo', $_COOKIE['user_pseudo'], time()-3600*24, '/My_tweeter', '', true);
+            header('Location: connexion');
+            return;
+    }
 }

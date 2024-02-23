@@ -1,6 +1,22 @@
 $(document).ready(function () {
+  let nb = document.getElementById("content");
+  let size = document.getElementById("size");
+
+  nb.addEventListener("keypress", () => {
+    size.textContent = `${nb.value.length + 1}/140`;
+
+    if (nb.value.length > 140) {
+      size.textContent = "Trop de caractères !";
+    }
+  });
+
   $("#twitt").submit(function (e) {
     e.preventDefault();
+
+    if (nb.value.length > 140) {
+      size.textContent = "Trop de caractères !";
+      return;
+    }
 
     const formdata = new FormData($(this)[0]);
 

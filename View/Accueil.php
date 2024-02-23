@@ -59,8 +59,9 @@ body {
             <div class='flex col item-center center gap-1'>
                 <div class='flex col center item-center gap-1 p-2 w-full'>
                     <img src="public/image/aots.png" height="50" width="50" alt="">
-                    <form method="POST" id='twitt'>
+                    <form method="POST" id='twitt' enctype="multipart/form-data">
                         <input type="text" id='content' name='content'>
+                        <input type="file" name='file' id='file'>
                         <button class='btn-dark'>Twitter</button>
                     </form>
                 </div>
@@ -73,6 +74,9 @@ body {
                     <p class='p-2'>
                         <?php echo $post['content']; ?>
                     </p>
+                    <?php if (!empty($post['image'])): ?>
+                    <img src="<?php echo $post['image']; ?>" class="img" alt="image">
+                    <?php endif; ?>
                     <div class='flex around item-center h-4 py-2'>
                         <a id="<?= $post['id'] ?>" class='text-light like' href="">like</a>
                         <a class='text-light' href="">Comment</a>

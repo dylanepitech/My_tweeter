@@ -13,7 +13,7 @@
 
             public function getpost()
                 {
-                    $query = "SELECT * FROM user inner join post on user.id = post.id_user";
+                    $query = "SELECT * FROM user inner join post on user.id = post.id_user order by date desc";
                     try {
                         $statement = $this->conn->prepare($query);
                         $statement->execute();
@@ -24,20 +24,34 @@
                     }
                 }
 
-                public function twitt($content, $id_user)
+                public function twitt($content, $id_user,$url_image)
                 {
-                    $query = "INSERT INTO post (id_user, content) VALUES (:id_user, :content)";
-                
+                    if ($url_image)
+                    {
+                    $query = "INSERT INTO post (id_user, content,image) VALUES (:id_user, :content, :url_image)";
                     try {
                         $statement = $this->conn->prepare($query);
                         $statement->bindParam(":id_user", $id_user); 
                         $statement->bindParam(":content", $content); 
+                        $statement->bindParam(":url_image", $url_image);
                         $statement->execute();
                         return true;
                     } catch (\Throwable $th) {
-                        error_log($th->getMessage());
                         return false;
                     }
+                    }else{
+                        $query = "INSERT INTO post (id_user, content) VALUES (:id_user, :content)";
+                        try {
+                            $statement = $this->conn->prepare($query);
+                            $statement->bindParam(":id_user", $id_user); 
+                            $statement->bindParam(":content", $content); 
+                            $statement->execute();
+                            return true;
+                        } catch (\Throwable $th) {
+                            return false;
+                        }
+                    }
+                   
                 }
                 
                 public function putlike($id_user, $id_post)

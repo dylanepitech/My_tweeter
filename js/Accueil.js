@@ -33,23 +33,23 @@ function getCookie(name) {
   }
 }
 
-const like = document.querySelector(".like");
-like.addEventListener("click", (e) => {
-  e.preventDefault();
-  const myCookieValue = getCookie("user_id");
-
-  const id_post = e.target.id;
-
-  const array = { id_user: myCookieValue, id_post: id_post };
-  if (myCookieValue !== null) {
-    $.ajax({
-      type: "POST",
-      url: "http://localhost:8888/My_tweeter/accueil_like",
-      data: array,
-      dataType: "json",
-      success: function (response) {},
-    });
-  } else {
-    console.log("Le cookie mon_cookie n'existe pas.");
-  }
+$(document).ready(function () {
+  $(".like-button").on("click", function (e) {
+    e.preventDefault();
+    const myCookieValue = getCookie("user_id");
+    const id_post = $(this).data("post-id");
+    const array = { id_user: myCookieValue, id_post: id_post };
+    if (myCookieValue !== null) {
+      $.ajax({
+        type: "POST",
+        url: "http://localhost:8888/My_tweeter/accueil_like",
+        data: array,
+        dataType: "json",
+        success: function (response) {},
+        error: function (xhr, status, error) {},
+      });
+    } else {
+      console.log("Le cookie user_id n'existe pas.");
+    }
+  });
 });

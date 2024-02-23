@@ -78,12 +78,13 @@ body {
                     <img src="<?php echo $post['image']; ?>" class="img" alt="image">
                     <?php endif; ?>
                     <div class='flex around item-center h-4 py-2'>
-                        <a id="<?= $post['id'] ?>" class='text-light like' href="">like</a>
+                        <button class='like-button' data-post-id='<?= $post['id'] ?>'>j'aime</button>
                         <a class='text-light' href="">Comment</a>
                         <a class='text-light' href="">Partage</a>
                     </div>
                 </div>
                 <?php endforeach; ?>
+
 
             </div>
         </div>

@@ -26,9 +26,6 @@
                     $pathtarget = false;
                 }
                 
-
-                
-
                 $result_twitt = $this->db->twitt($_POST['content'], $_COOKIE['user_id'], $pathtarget);
 
                 if ($result_twitt)

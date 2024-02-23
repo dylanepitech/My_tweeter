@@ -26,4 +26,17 @@ class ConnexionController
 
         }
     }
+
+    public function reactivation()
+    {
+        $var = $this->user->user_reactivation($_POST);
+        if ($var)
+        {
+            echo json_encode(array('status'=> 'success','message'=> 'Ok'));
+            return;
+        }else{
+            echo json_encode(array('status'=> 'echec', 'message'=> "non"));
+            return;
+        }
+    }
 }

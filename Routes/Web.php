@@ -13,3 +13,4 @@ $router->Route('/inscription','InscriptionController@view');
 $router->Route('/inscription','InscriptionController@inscription_controller', 'POST');
 $router->Route('/connexion','ConnexionController@view');
 $router->Route('/connexion','ConnexionController@connexion_controller', 'POST');
+$router->Route('/connexion_reactivate','ConnexionController@reactivation', 'POST');

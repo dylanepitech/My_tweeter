@@ -21,4 +21,14 @@ $title = "Connexion";
     $formulaire->close();
     echo "<p class='text-light fs-1 px-5'>Pour pouvoir vous connecter vous devez accepter les cookies.</p>"
 ?>
+
+    <h2 class="text-info py-2 pt-10">Réactiver mon compte via mon email</h2>
+    <?php 
+     $formulaires = new Formulaire();
+     $formulaires->open('POST', "formulaire_reactivation");
+     $formulaires->input('Email','email','email_reactivate');
+    echo "<p id='error2' class='text-danger fs-2'></p>";
+    $formulaires->button('info',"Réactiver mon compte");
+    $formulaires->close();
+    ?>
 </div>

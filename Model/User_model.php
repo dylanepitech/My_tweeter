@@ -178,5 +178,35 @@ class User_model extends Database
             return false;
         }
     }
+
+    public function user_reactivation($email)
+    {
+        $query = "SELECT desactivate FROM user WHERE email = :email AND desactivate = 0";
+
+        try {
+            $statement = $this->conn->prepare($query);
+            $statement->bindParam(":email", $email['email_reactivate']);
+            $statement->execute();
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+            if ($result) {
+                return false;
+            }
+            
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+
+        $querry = "UPDATE user SET desactivate = 0 where email = :email";
+
+        try {
+            $statement = $this->conn->prepare($querry);
+            $statement->bindParam(":email", $email['email_reactivate']);
+            $statement->execute();
+            return true;
+        } catch (\Throwable $th) {
+        return false;
+        }
+    }
     
 }

@@ -15,7 +15,7 @@ $title = "Profil";
     $formulaire->input('Prénom:','text','firstname', "{$result['firstname']}");
     $formulaire->input('Nom:','text','lastname', "{$result['lastname']}");
     $formulaire->input('Email:', 'email', 'email', "{$result['email']}");
-    $formulaire->password('password','Password');
+    $formulaire->password('password','Mot de passe');
     $formulaire->input('Anniversaire:','date','birthday' , "{$result['birthday']}");
     $formulaire->input('Pseudonyme:','text','pseudo', "{$result['pseudo']}");
     $formulaire->input('Ville:','text','city', "{$result['city']}");

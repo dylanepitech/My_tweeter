@@ -10,7 +10,9 @@ $(document).ready(function () {
       data: formdata,
       processData: false,
       contentType: false,
-      success: function (response) {},
+      success: function (response) {
+        location.reload(true);
+      },
     });
     location.reload(true);
   });

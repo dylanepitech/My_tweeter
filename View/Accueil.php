@@ -28,7 +28,7 @@ body {
                 </div>
                 <div class='flex row beewtween item-center w-auto rounded-3 h-4 fs-2 gap-2 px-1 base' id="base">
                     <img src="public/style/icon/profile.png" height="30" width="30" alt="profile_icon">
-                    <p>Profile</p>
+                    <a class="text-light" href='profil'>Profile</a>
                 </div>
                 <div class='flex row beewtween item-center w-auto rounded-3 h-4 fs-2 gap-2 px-1 base' id="base">
                     <img src="public/style/icon/follow.png" height="30" width="30" alt="follower-icon">
@@ -37,9 +37,6 @@ body {
                 <div class='flex row beewtween item-center w-auto rounded-3 h-4 fs-2 gap-2 px-1 base' id="base">
                     <img src="public/style/icon/message.png" height="30" width="30" alt="message_icon">
                     <p>Messages</p>
-                </div>
-                <div class='flex row beewtween item-center w-10 h-auto gap-2 fs-2'>
-                    <button class='btn-info fs-2 h-4'>Post</button>
                 </div>
                 <div class='flex row beewtween item-center w-auto rounded-3 h-auto fs-2 gap-2 px-1 py-1 mt-15 base'
                     id="base">

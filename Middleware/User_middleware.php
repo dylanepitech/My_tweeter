@@ -11,9 +11,16 @@ class User_middleware extends User_model
     {
         $user = $this->user_conn->GetUserInfo($id);
 
+        if ($user['desactivate'] == true)
+        {
+            header('Location: connexion');
+            return;
+        }
+
         if ($user == false)
         {
             header('Location: connexion');
+            return;
         }
     }
 

@@ -7,9 +7,9 @@ class Formulaire{
     {
         echo "<form method='$method' id='$id'>";
     }
-    public function input($label, $type ,$name){
+    public function input($label, $type ,$name, $value = null){
         // echo "<label>$label</label>";
-        echo "<input type='$type' id='$name' name='$name' placeholder='$label'>";
+        echo "<input type='$type' id='$name' name='$name' placeholder='$label' value='$value'>";
     }
     public function checkbox($label,$name){
         echo "<div class='flex row center item-center h-3'>";

@@ -57,6 +57,10 @@ class User_model extends Database
             $statement->execute();
             $result = $statement->fetch(PDO::FETCH_ASSOC);
         
+            if ($result['desactivate'] == true)
+            {
+                return false;
+            }
 
             $hashedPasswordFromDB = $result['password'];
             $salt = "vive le projet tweet_academy"; 
@@ -91,5 +95,88 @@ class User_model extends Database
         }
     }
 
+    public function modification($info,$id)
+    {
+        if ($info['password'] == ""){
+            $querry = "UPDATE user SET
+            firstname = :firstname,
+            lastname = :lastname,
+            birthday = :birthday,
+            email = :email,
+            pseudo = :pseudo,
+            city = :city,
+            phone = :phone
+            WHERE id = :user_id";
+
+
+            try {
+                $statement = $this->conn->prepare($querry);
+                $statement->bindParam(':user_id', $id);
+                $statement->bindParam(':firstname', $info['firstname']);
+                $statement->bindParam(':lastname', $info['lastname']);
+                $statement->bindParam(':email', $info['email']);
+                $statement->bindParam(':birthday', $info['birthday']);
+                $statement->bindParam(':pseudo', $info['pseudo']);
+                $statement->bindParam(':city', $info['city']);
+                $statement->bindParam(':phone', $info['phone']);
+                $statement->execute();
+                return true;
+            } catch (\Throwable $th) {
+                return false;
+            }
+        }else{
+
+            $querry = "UPDATE user SET
+            firstname = :firstname,
+            lastname = :lastname,
+            birthday = :birthday,
+            email = :email,
+            pseudo = :pseudo,
+            city = :city,
+            phone = :phone,
+            password = :password
+            WHERE id = :user_id";
+
+
+            $password = $info['password'];
+            $salt = "vive le projet tweet_academy";
+            $passwordToHash = $password . $salt;
+            $hashedPassword = hash('ripemd160', $passwordToHash);
+
+           try {
+            $statement = $this->conn->prepare($querry);
+            $statement->bindParam(':user_id', $id);
+            $statement->bindParam(':password', $hashedPassword);
+            $statement->bindParam(':firstname', $info['firstname']);
+            $statement->bindParam(':lastname', $info['lastname']);
+            $statement->bindParam(':email', $info['email']);
+            $statement->bindParam(':birthday', $info['birthday']);
+            $statement->bindParam(':pseudo', $info['pseudo']);
+            $statement->bindParam(':city', $info['city']);
+            $statement->bindParam(':phone', $info['phone']);
+            $statement->execute();
+            return true;
+           } catch (\Throwable $th) {
+            return false;
+           }
+
+
+        }
+
+       
+    }
+
+    public function user_suppression($id)
+    {
+        $querry = "UPDATE user SET desactivate = true where id = :id";
+        try {
+            $statement = $this->conn->prepare($querry);
+            $statement->bindParam(":id", $id);
+            $statement->execute();
+            return true;
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
     
 }

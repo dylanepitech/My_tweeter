@@ -47,7 +47,7 @@ Suivez ces étapes pour installer My_tweeter sur votre serveur :
 1. **Clonez le dépôt :**
 
 ```bash
-git clone https://github.com/votreUsername/My_tweeter.git
+git clone https://github.com/dylanepitech/My_tweeter.git
 cd My_tweeter
 composer install
 php Model/table.php
